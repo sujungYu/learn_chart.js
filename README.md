@@ -1,24 +1,19 @@
-# vue-charts
+# learn_chart.js
+ 캡틴 판교 <vue.js 완벽 가이드>
+## Content
+1. 차트 라이브러리 npm으로 설치
+`npm install chart.js`
+2. 설치된 라이브러리를 import로 App.vue에서 로딩
+3. mounted() 라이프 사이클 훅에서 차트를 그림 (ref 속성)
+4. 차트를 컴포넌트화
+5. 컴포넌트의 플러그인화
+6. 컴포넌트 통신을 이용한 차트 컴포넌트 기능 결합
 
-## Project setup
-```
-npm install
-```
+### ref 속성
++ vue에서 특정 DOM이나 컴포넌트의 정보를 접근하기 위해 사용하는 속성
++ document.getElementById는 화면에서 그려지는 DOM에 접근하기 때문에 충돌날 확률이 높다.
++ 컴포넌트 기반으로 개발한다고 가정 했을 때, 각각의 컴포넌트 template 안에서 접근할 수 있는 ref 속성을 사용하는게 유리하다. (에러없는 코드 작성에 유리)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 플러그인
++ 모든 컴포넌트에서 사용하고 싶은 기능을 정의
++ `Vue.use` 형태는 전부 vue에서 제공하는 플러그인을 사용한 형태이다.
